@@ -1,7 +1,7 @@
-
+#       🐧 Linux System Audit Tool
 
 <div align="center">
-#🐧 Linux System Audit Tool
+
 [![Bash](https://img.shields.io/badge/Bash-4.0+-green.svg)](https://www.gnu.org/software/bash/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Linux-yellow.svg)]()
