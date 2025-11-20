@@ -12,7 +12,7 @@
 Comprehensive performance auditing, security analysis, and system health monitoring.
 
 [Features](#-features) • [Installation](#-quick-start) • [Usage](#-usage) • [Documentation](#-audit-categories) • [Contributing](#-contributing)
-
+![alt text](image.png)
 </div>
 
 ---
@@ -392,60 +392,6 @@ sudo systemctl restart systemd-journald
 ```
 
 </details>
-
----
-
-## 🚀 Advanced Usage
-
-### Remote Execution via SSH
-
-```bash
-# Run on remote server
-ssh root@server.example.com 'bash -s' < linux_system_audit.sh --internal-full-audit
-
-# Multiple servers
-for server in web01 web02 db01; do
-    ssh root@$server 'bash -s' < linux_system_audit.sh > /tmp/${server}_audit.log
-done
-```
-
-### Ansible Integration
-
-```yaml
----
-- name: Run Linux System Audit
-  hosts: all
-  become: yes
-  tasks:
-    - name: Copy audit script
-      copy:
-        src: linux_system_audit.sh
-        dest: /tmp/linux_system_audit.sh
-        mode: '0755'
-    
-    - name: Run audit
-      shell: /tmp/linux_system_audit.sh --internal-full-audit
-      register: audit_output
-    
-    - name: Save report
-      copy:
-        content: "{{ audit_output.stdout }}"
-        dest: "/var/tmp/audit_{{ inventory_hostname }}_{{ ansible_date_time.iso8601_basic_short }}.log"
-```
-
----
-
-## 🗺️ Roadmap
-
-- [ ] **JSON Output Format** - Machine-readable reports for automation
-- [ ] **Threshold Alerts** - Configurable warning/critical thresholds
-- [ ] **Graphical Dashboard** - HTML report with charts
-- [ ] **Remote Audit via SSH** - Multi-server orchestration
-- [ ] **Database Backend** - Store historical audit data
-- [ ] **Container-Native Checks** - Deep Docker/Kubernetes inspection
-- [ ] **Cloud Provider Integration** - AWS/Azure/GCP specific checks
-- [ ] **Compliance Presets** - CIS Benchmark, NIST, PCI-DSS profiles
-- [ ] **Webhook/API Support** - Slack/Teams/Zabbix integration
 
 ---
 
