@@ -1,4 +1,4 @@
-# 🐧 Linux System Audit Tool
+#       🐧 Linux System Audit Tool
 
 <div align="center">
 
@@ -196,30 +196,7 @@ Select option (0-42): 0    # Exit
 sudo ./linux_system_audit.sh
 ```
 
-Navigate through the color-coded menu to select individual checks or run a full audit.
-
-### Non-Interactive Export
-
-```bash
-# Generate full audit report directly
-sudo ./linux_system_audit.sh --internal-full-audit > /var/tmp/audit_$(date +%Y%m%d_%H%M%S).log 2>&1
-
-# Verify report
-cat /var/tmp/audit_20251120_124500.log
-```
-
-### Scheduled Audits (Cron)
-
-Run weekly audits automatically:
-
-```bash
-# Edit root crontab
-sudo crontab -e
-
-# Add this line (runs every Monday at 2 AM)
-0 2 * * 1 /path/to/linux_system_audit.sh --internal-full-audit > /var/tmp/weekly_audit_$(date +\%Y\%m\%d).log 2>&1
-```
-
+Navigate through the color-coded menu to select individual checks or run a full audit
 ---
 
 ## 📊 Audit Categories

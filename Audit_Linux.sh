@@ -47,10 +47,10 @@ print_header() {
     clear
     echo -e "${CYAN}╔═══════════════════════════════════════════════════════════════════════╗${RESET}"
     echo -e "${CYAN}║                                                                       ║${RESET}"
-    echo -e "${CYAN}║   LINUX SYSTEM SLOWNESS AUDIT TOOL v1.0.0 - PROFESSIONAL              ║${RESET}"
+    echo -e "${CYAN}║           LINUX SYSTEM AUDIT TOOL v1.0.0 - PROFESSIONAL               ║${RESET}"
     echo -e "${CYAN}║                                                                       ║${RESET}"
-    echo -e "${CYAN}║   Developed By: Abubakkar Khan (Linux Edition)                        ║${RESET}"
-    echo -e "${CYAN}║   System Engineer | Cybersecurity Researcher                          ║${RESET}"
+    echo -e "${CYAN}║            Developed By: Abubakkar Khan (Linux Edition)               ║${RESET}"
+    echo -e "${CYAN}║             System Engineer | Cybersecurity Researcher                ║${RESET}"
     echo -e "${CYAN}║                                                                       ║${RESET}"
     echo -e "${CYAN}╚═══════════════════════════════════════════════════════════════════════╝${RESET}"
     echo
