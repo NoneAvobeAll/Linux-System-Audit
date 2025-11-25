@@ -132,6 +132,8 @@ cpu_usage() {
         echo
         echo "mpstat (average over 5 seconds):"
         mpstat 1 5
+        echo "from proc/loadavg file:"
+        cut -d ' ' -f1-3 /proc/loadavg
     else
         echo
         echo "mpstat not found; install 'sysstat' package for detailed CPU stats."
