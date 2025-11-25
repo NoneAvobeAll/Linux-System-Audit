@@ -133,7 +133,11 @@ cpu_usage() {
         echo "mpstat (average over 5 seconds):"
         mpstat 1 5
         echo "from proc/loadavg file:"
-        cut -d ' ' -f1-3 /proc/loadavg
+        LOAD1=$(cut -d ' ' -f1 /proc/loadavg)
+LOAD_COLOR="${YELLOW}"
+[ "$(echo "$LOAD1 > 2.0" | bc -l)" -eq 1 ] && LOAD_COLOR="${RED}"
+printf "%b\n" "${BLUE}│ ${WHITE}Load Avg   : ${LOAD_COLOR}$(cut -d ' ' -f1-3 /proc/loadavg)${RESET}"
+
     else
         echo
         echo "mpstat not found; install 'sysstat' package for detailed CPU stats."
